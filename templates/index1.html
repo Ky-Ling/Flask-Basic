@@ -1,0 +1,17 @@
+<!--
+ * @Date: 2021-10-09 13:49:42
+ * @LastEditors: GC
+ * @LastEditTime: 2021-10-09 14:12:06
+ * @FilePath: \Flask\templates\index1.html
+-->
+
+<!-- This is a child web page of the base.html -->
+<!-- Give some content of the title to that title in the base.html -->
+{% extends "base.html" %} 
+
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<h1>This is something about the content of the base.html</h1>
+{% endblock %}

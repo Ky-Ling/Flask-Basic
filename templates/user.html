@@ -1,0 +1,24 @@
+<!--
+ * @Date: 2021-10-10 12:57:08
+ * @LastEditors: GC
+ * @LastEditTime: 2021-10-10 19:10:03
+ * @FilePath: \Flask\templates\user.html
+-->
+{% extends "base.html" %} {% block title %} User {% endblock %} {% block content
+%} {% with messages = get_flashed_messages() %} {% if messages %} {% for msg in
+messages %}
+<h2>{{msg}}</h2>
+{% endfor %} {% endif%} {% endwith %}
+<h3>Welcome!!! {{user}}</h3>
+
+<form action="#" method="post">
+  <input
+    type="email"
+    name="email"
+    placeholder="Please input your email"
+    value="{{ email if email }}"
+  />
+
+  <input type="submit" value="Submit" />
+</form>
+{% endblock %}

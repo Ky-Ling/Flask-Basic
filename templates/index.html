@@ -1,0 +1,32 @@
+<!--
+ * @Date: 2021-10-08 18:38:39
+ * @LastEditors: GC
+ * @LastEditTime: 2021-10-08 19:28:27
+ * @FilePath: \Flask\templates\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <h1>Home Page</h1>
+    <p>
+      {{content}}
+      <!-- It allows us to type any variable or information that's gonna be passed into this template. -->
+      <!-- Why i define content inside this html template? I can pass a value that will replace content, go to my render html
+                function and type content=name in this case. -->
+    </p>
+    <p>{{r}}</p>
+    <!-- If we have a ton of information need to deal with, how could we do? We can write native Python code in the curly braces within
+                the HTML to do specific things. -->
+    {% for x in range(10) %} {% if x % 2 == 1 %}
+    <!-- <p>x</p> -->
+
+    <p>{{x}}</p>
+    {% endif %} {% endfor %}
+  </body>
+</html>

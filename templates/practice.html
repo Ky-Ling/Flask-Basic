@@ -1,0 +1,23 @@
+<!--
+ * @Date: 2021-10-29 22:10:31
+ * @LastEditors: GC
+ * @LastEditTime: 2021-10-30 19:08:15
+ * @FilePath: \Flask\templates\practice.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <body>
+    {% block content %}
+    <h1>
+      Hello, This is a home page, you can do something when you type"/..." after
+      the URL of this page!
+    </h1>
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,11 @@
+<!--
+ * @Date: 2021-10-11 20:12:30
+ * @LastEditors: GC
+ * @LastEditTime: 2021-10-11 20:35:38
+ * @FilePath: \Flask\templates\home.html
+-->
+{% extends "base1.html" %} {% block title %} Home Page {% endblock %} {% block
+content %}
+<h1>It is my home page</h1>
+<img src="{{ url_for('static', filename='image.jpg')}}" />
+{% endblock %}

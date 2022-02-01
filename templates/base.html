@@ -1,0 +1,23 @@
+<!--
+ * @Date: 2021-10-09 13:45:26
+ * @LastEditors: GC
+ * @LastEditTime: 2021-10-09 14:20:49
+ * @FilePath: \Flask\templates\base.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- We can allow our child templates to change specific functionality of the base template is adding something called "block" -->
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <body>
+    <!-- This h1 tag will be shown on every single web page no matter what. -->
+    <h1>Welcome to my first web page!</h1>
+
+    {% block content %} {% endblock %}
+  </body>
+</html>

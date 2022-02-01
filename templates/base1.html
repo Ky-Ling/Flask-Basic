@@ -1,0 +1,24 @@
+<!--
+ * @Date: 2021-10-11 20:12:21
+ * @LastEditors: GC
+ * @LastEditTime: 2021-10-11 20:29:08
+ * @FilePath: \Flask\templates\base1.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',
+    filename='style.css')}}"
+    />
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <body>
+    {% block content %} {% endblock %}
+  </body>
+</html>

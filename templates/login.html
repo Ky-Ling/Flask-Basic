@@ -1,0 +1,17 @@
+<!--
+ * @Date: 2021-10-09 14:39:39
+ * @LastEditors: GC
+ * @LastEditTime: 2021-10-10 12:50:28
+ * @FilePath: \Flask\templates\login.html
+-->
+{% extends "base.html" %} {% block title %} Login Page {% endblock %} {% block
+content %} {% with messages = get_flashed_messages() %} {% if messages %} {% for
+msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %} {% endif%} {% endwith %}
+<form action="#" method="post">
+  <p>Name:</p>
+  <input type="text" name="nm" />
+  <input type="submit" value="Submit" />
+</form>
+{% endblock %}
