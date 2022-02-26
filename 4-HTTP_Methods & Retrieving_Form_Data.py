@@ -1,14 +1,12 @@
 '''
 Date: 2021-10-09 14:21:32
 LastEditors: GC
-LastEditTime: 2021-10-09 19:41:10
+LastEditTime: 2022-02-26 14:43:35
 FilePath: \Flask\4-HTTP_Methods & Retrieving_Form_Data.py
 '''
 from flask import Flask, render_template, request, url_for, redirect
 
-
 app = Flask(__name__)
-
 
 # The default method is GET
 @app.route("/")
@@ -24,12 +22,12 @@ def login():
         # We will get the information that was from that name box and then send to the user page where we
         #   can display the user's name.
         user = request.form["nm"]
+        
         return redirect(url_for("user", usr=user))
     else:
         return render_template("login.html")
 
 # We have this login page and once we logged in, we can get the user name and then we can redirect them to a page that show their name.
-
 
 @ app.route("/<usr>")
 def user(usr):

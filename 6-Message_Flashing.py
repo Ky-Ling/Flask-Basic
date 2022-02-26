@@ -1,7 +1,7 @@
 '''
 Date: 2021-10-10 09:46:08
 LastEditors: GC
-LastEditTime: 2021-10-14 10:03:57
+LastEditTime: 2022-02-26 15:01:28
 FilePath: \Flask\6-Message_Flashing.py
 '''
 
@@ -25,6 +25,7 @@ def login():
         user = request.form["nm"]
 
         flash("Login in successfully!!")
+        
         # Set up the session
         session["user"] = user
 
@@ -48,6 +49,7 @@ def user():
 
 @app.route("/loginout")
 def loginout():
+
     # We can check if we have a user in the session and only if we do then we will say you have been logged out.
     if "user" in session["user"]:
         user = session["user"]

@@ -1,7 +1,7 @@
 '''
 Date: 2021-10-11 20:55:04
 LastEditors: GC
-LastEditTime: 2021-10-14 10:09:44
+LastEditTime: 2022-02-26 15:25:28
 FilePath: \Flask\10-main.py
 '''
 from flask import Flask, render_template
@@ -12,7 +12,6 @@ app = Flask(__name__)
 
 # Set up the blueprint from the main flask application.
 app.register_blueprint(blue, url_prefix="/admin")
-
 
 # In this case, we put nothing in the usr_prefix, when we run this file, if we type "/" after the url, are we go to the test page
 #   in the main file or go to the home page in the blueprint page?

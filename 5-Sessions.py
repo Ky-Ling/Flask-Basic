@@ -1,7 +1,7 @@
 '''
 Date: 2021-10-09 19:41:35
 LastEditors: GC
-LastEditTime: 2021-10-12 14:27:40
+LastEditTime: 2022-02-26 14:51:25
 FilePath: \Flask\5-Sessions.py
 '''
 from flask import Flask, render_template, request, url_for, redirect, session
@@ -27,6 +27,7 @@ def home():
 @app.route("/login", methods=["POST", "GET"])
 def login():
     if request.method == "POST":
+        
         # It will define this specific session as a permanent session.
         session.permanent = True
 
@@ -53,8 +54,8 @@ def user():
         user = session["user"]
         return f"<h1>{user}</h1>"
     else:
-        # Redirect back to the login page.
 
+        # Redirect back to the login page.
         redirect(url_for("login"))
 
 # There is one thing we should notice: when we close the web browser, my session data is actually deleted from the server which

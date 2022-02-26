@@ -1,12 +1,13 @@
 '''
 Date: 2021-10-08 18:28:18
 LastEditors: GC
-LastEditTime: 2021-10-29 22:06:20
+LastEditTime: 2022-02-26 14:35:24
 FilePath: \Flask\2-HTML_Templates.py
 '''
+# render_template is gonna allow us grab a HTML file and render that as our web page.
+
 from flask import Flask, render_template
 
-# render_template is gonna allow us grab a HTML file and render that as our web page.
 app = Flask(__name__)
 
 

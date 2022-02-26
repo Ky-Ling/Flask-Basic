@@ -1,7 +1,7 @@
 '''
 Date: 2021-10-08 14:09:58
 LastEditors: GC
-LastEditTime: 2021-10-29 21:56:14
+LastEditTime: 2022-02-26 14:34:26
 FilePath: \Flask\1-Basic.py
 '''
 
@@ -19,6 +19,7 @@ app = Flask(__name__)
 
 # We then use the route() decorator to tell Flask what URL should trigger our function.
 @app.route("/")
+
 # We will define a home page and this function will be displayed on the page.
 def home():
     # Add inline HTML when we are returning it from a function.
@@ -39,7 +40,7 @@ def admin():
     return redirect(url_for("user", name="Admin!"))
 
 # When I go to the /admin page, it's gonna return the url for user and it is gonna pass through the argument
-#   Admin, and it will print "Hello Admin"
+#   "Admin", and it will print "Hello Admin"
 
 
 # Run this app.
